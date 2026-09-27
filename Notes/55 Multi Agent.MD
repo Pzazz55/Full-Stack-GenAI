@@ -44,3 +44,38 @@ Think of a **hospital emergency room**:
 - Specialists may perform multiple steps (tests, scans, diagnosis).
 
 LangGraph MAS works the same way:
+
+
+User → Router → Specialist → Tools → Final Answer
+
+
+
+---
+
+## 2. UNDER THE HOOD: MECHANICS & ARCHITECTURE
+
+### **How It Works (Step-by-Step)**
+
+1. **User Query Arrives**
+2. **Router Node Reads the Query**
+3. Router decides:  
+   - Technical  
+   - Billing  
+   - General  
+4. Router sends the query to exactly **one specialist**.
+5. Specialist produces the final answer.
+6. Workflow ends.
+
+### **Mental Model: MAS Architecture**
+
+| Component | Role | Analogy |
+|----------|------|---------|
+| Router | Chooses the right specialist | Triage nurse |
+| Specialist Agent | Solves the problem | Doctor |
+| Tools | External capabilities | Medical tests |
+| Edges | Workflow transitions | Hallways between rooms |
+| State | Shared memory | Patient chart |
+
+### **Instructor’s Structural Diagram**
+
+
